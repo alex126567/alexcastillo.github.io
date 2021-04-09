@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,8 +9,8 @@
     <link rel="stylesheet" href="css/material-design-iconic-font.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
-</head>>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     
     <script src="bootstrap.min.js"></script>
 <body>
@@ -24,7 +25,10 @@
                     <a href="login.html" class="navbar-top-links">Iniciar sesión</a>
                 </li>
                 <li class="navbar-top-item">
-                    <a href="#" precio="0" titulo=""role="button" class="zmdi zmdi-shopping-cart producto">Carrito</a>
+                    <a href="#" class="navbar-top-links">
+                        <i class="zmdi zmdi-shopping-cart"></i> Carrito
+                        <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -32,7 +36,7 @@
             <header class="nabvar-mobile is-size-5-mobile">
                 <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
                 <a class="navbar-mobile-link has-text-white" href="index.html">La pizza de Don Cangrejo</a>
-               <a href="#" precio="0" titulo=""role="button" class="zmdi zmdi-shopping-cart producto">Carrito</a>
+                <a class="navbar-mobile-link has-text-white" href="#"><i class="zmdi zmdi-shopping-cart"></i> Vacio</a>
             </header>
             <nav class="nav-menu --nav-dark-light" id="mySidenav">
                 <form class="form-group " action="#">
@@ -101,7 +105,8 @@
                     </li>
                     <li class="nav-menu-item"><a href="brand.html" class="nav-menu-link">Marca</a></li>
                     
-                  <li class="nav-menu-item"><a href="productos.html" class="nav-menu-link">Productos</a></li>
+                    <li class="nav-menu-item"><a href="login.html" class="nav-menu-link">Registro</a></li>
+                    <li class="nav-menu-item"><a href="lookbook.html" class="nav-menu-link">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </nav>
@@ -331,11 +336,8 @@
                 <a class="footer-bar-top-links" href="#">2021 La pizza de Don Cangrejo</a>
             </div>
         </div>
-    </footer>   
-        </section>
-        </div>
-    </div>
-	<script src="minicart.js"></script>
+    </footer>
+    <script src="minicart.js"></script>
 	<script>
 	  // configuración inicial del carrito 
 	  paypal.minicart.render({
@@ -351,7 +353,7 @@
 	   $('.producto').click(function(e){
 	       e.stopPropagation();
 		    paypal.minicart.cart.add({
-			business: 'uhperezoscar@gmail.com', // Cuenta paypal para recibir el dinero
+			business: 'alex19_castillo@hotmail.com', // Cuenta paypal para recibir el dinero
 			item_name: $(this).attr("titulo"),
 			 amount: $(this).attr("precio"),
 			 currency_code: 'USD',
@@ -360,10 +362,6 @@
 	   });
 	  
 	</script>
-	
 </body>
+
 </html>
-
-
-
-
